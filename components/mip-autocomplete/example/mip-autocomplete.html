@@ -16,7 +16,7 @@
 </head>
 <body>
   <h2>基本使用 -- 浏览器端设置提示数据，filter="substring"</h2>
-  <mip-form>
+  <form>
     <mip-autocomplete filter="substring">
       <input>
       <script type="application/json">
@@ -25,23 +25,23 @@
         }
       </script>
     </mip-autocomplete>
-  </mip-form>
+  </form>
 
   <div class="space"></div>
 
   <h2>基本使用 -- 服务器端获取提示数据，filter="substring"</h2>
-  <mip-form>
+  <form>
     <mip-autocomplete filter="substring"
       src="./mockGet.json">
       <input>
     </mip-autocomplete>
-  </mip-form>
+  </form>
 
   <div class="space"></div>
 
   <h2>基本使用 -- filter="prefix"</h2>
   <h4>输入框聚焦不显示提示，需输入合法的前缀字符才显示: 请输入 a 或 b 或 o</h4>
-  <mip-form>
+  <form>
   <mip-autocomplete filter="prefix">
     <input>
     <script type="application/json">
@@ -50,13 +50,13 @@
       }
     </script>
   </mip-autocomplete>
-  </mip-form>
+  </form>
 
   <div class="space"></div>
 
   <h2>基本使用 -- filter="none"</h2>
   <h4>不过滤数据。如果提供了 `max-entries` 属性，则最多只显示 `max-entries` 数目的提示。</h4>
-  <mip-form>
+  <form>
   <mip-autocomplete filter="none">
     <input>
     <script type="application/json">
@@ -65,13 +65,13 @@
       }
     </script>
   </mip-autocomplete>
-  </mip-form>
+  </form>
 
   <div class="space"></div>
 
   <h2>基本使用 -- min-characters="2"，filter="prefix"</h2>
   <h4>触发筛选提示的用户输入最小字符串的长度为 2: 请输入 ap 或 ba 或 or</h4>
-  <mip-form>
+  <form>
   <mip-autocomplete filter="prefix" min-characters="2">
     <input>
     <script type="application/json">
@@ -80,13 +80,13 @@
       }
     </script>
   </mip-autocomplete>
-  </mip-form>
+  </form>
 
   <div class="space"></div>
 
   <h2>基本使用 -- max-entries="2"，filter="substring"</h2>
   <h4>最多显示条目为 2 条: 请输入 ap 或 ba </h4>
-  <mip-form>
+  <form>
   <mip-autocomplete filter="substring" max-entries="2">
     <input>
     <script type="application/json">
@@ -95,13 +95,13 @@
       }
     </script>
   </mip-autocomplete>
-  </mip-form>
+  </form>
 
   <div class="space"></div>
 
   <h2>更多功能 -- 使用 filter-value 属性进行筛选</h2>
   <h4>filter="substring"</h4>
-  <mip-form>
+  <form>
     <mip-autocomplete filter="substring"
       filter-value="city">
       <input type="text">
@@ -126,13 +126,13 @@
         }
       </script>
     </mip-autocomplete>
-  </mip-form>
+  </form>
 
   <div class="space"></div>
 
   <h2>更多功能 -- 使用 filter-value 属性进行筛选，同时使用 template 模板渲染</h2>
   <h4>filter="substring"</h4>
-  <mip-form>
+  <form>
     <mip-autocomplete filter="substring"
       filter-value="city">
       <input type="text">
@@ -165,12 +165,12 @@
         </section>
       </template>
     </mip-autocomplete>
-  </mip-form>
+  </form>
 
   <div class="space"></div>
 
   <h2>更多功能 -- submit-on-enter="true"</h2>
-  <mip-form method="GET" fetch-url="./mockSubmit.json">
+  <form method="GET" fetch-url="./mockSubmit.json">
     <mip-autocomplete filter="substring" submit-on-enter="true">
       <input name="name">
       <script type="application/json">
@@ -179,12 +179,12 @@
         }
       </script>
     </mip-autocomplete>
-  </mip-form>
+  </form>
 
   <div class="space"></div>
 
   <h2>更多功能 -- select 事件</h2>
-  <mip-form method="GET" fetch-url="./mockSubmit.json" on="select:toast1.show(event.value)">
+  <form method="GET" fetch-url="./mockSubmit.json" on="select:toast1.show(event.value)">
     <mip-autocomplete filter="substring" submit-on-enter="true">
       <input name="name">
       <script type="application/json">
@@ -193,14 +193,14 @@
         }
       </script>
     </mip-autocomplete>
-  </mip-form>
+  </form>
   <mip-toast
     id= "toast1"
     station = "top">
   </mip-toast>
 
   <script src="https://c.mipcdn.com/static/v2/mip.js"></script>
-  <script src="https://c.mipcdn.com/static/v2/mip-form/mip-form.js"></script>
+  <script src="https://c.mipcdn.com/static/v2/form/form.js"></script>
   <script src="https://c.mipcdn.com/static/v2/mip-toast/mip-toast.js"></script>
   <script src="/mip-autocomplete/mip-autocomplete.js"></script>
   <script src="https://c.mipcdn.com/static/v2/mip-mustache/mip-mustache.js"></script>

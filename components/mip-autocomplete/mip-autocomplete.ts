@@ -104,11 +104,11 @@ export default class MIPAutocomplete extends CustomElement {
     }
     // 设置文本方向
     this.inputElement.setAttribute('dir', 'auto')
-    this.mipForm = dom.closest(this.inputElement, 'mip-form')
-    if (!this.mipForm) {
-      error('组件必须嵌套在 mip-form 组件中')
-      return
-    }
+    // this.mipForm = dom.closest(this.inputElement, 'mip-form')
+    // if (!this.mipForm) {
+    //   error('组件必须嵌套在 mip-form 组件中')
+    //   return
+    // }
     if (this.mipForm.hasAttribute('autocomplete')) {
       this.initialAutocompleteAttr = this.mipForm.getAttribute('autocomplete')
     }
